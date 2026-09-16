@@ -55,7 +55,7 @@ server {
 NGINXCONF
 
 echo "=== Restarting Nginx ==="
-docker-compose restart nginx
+docker compose restart nginx
 
 echo ""
 echo "============================================"
