@@ -336,14 +336,15 @@ main {
 
 .scroll-indicator {
     position: absolute;
-    bottom: 40px;
+    bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
     color: var(--text-muted);
     font-size: 11px;
-    z-index: 3;
+    z-index: 10;
+    cursor: pointer;
     animation: scrollBounce 2s infinite ease-in-out;
 }
 

@@ -11,7 +11,7 @@ import (
 )
 
 func Projects(c *gin.Context) {
-	rows, err := database.DB.Query("SELECT id, title, description, url, image_url FROM projects ORDER BY id DESC")
+	rows, err := database.DB.Query("SELECT id, title, description, COALESCE(url, ''), COALESCE(image_url, '') FROM projects ORDER BY id DESC")
 	if err != nil {
 		log.Println("Error fetching projects:", err)
 		c.HTML(http.StatusInternalServerError, "projects.html", gin.H{
