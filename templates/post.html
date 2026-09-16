@@ -1,0 +1,18 @@
+{{ template "layout" . }}
+{{ define "content" }}
+<section>
+    {{ if .error }}
+        <p class="error">{{ .error }}</p>
+        <a href="/blog">&larr; Back to Blog</a>
+    {{ else }}
+        <article>
+            <h1>{{ .post.Title }}</h1>
+            <time>{{ .post.CreatedAt.Format "January 2, 2006" }}</time>
+            <div class="post-content">
+                {{ .post.Content }}
+            </div>
+            <a href="/blog">&larr; Back to Blog</a>
+        </article>
+    {{ end }}
+</section>
+{{ end }}

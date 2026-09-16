@@ -1,0 +1,22 @@
+{{ template "layout" . }}
+{{ define "content" }}
+<section>
+    <h1>Blog</h1>
+
+    {{ if .error }}
+        <p class="error">{{ .error }}</p>
+    {{ end }}
+
+    {{ if .posts }}
+        {{ range .posts }}
+        <article class="card">
+            <h3><a href="/blog/{{ .ID }}">{{ .Title }}</a></h3>
+            <time>{{ .CreatedAt.Format "January 2, 2006" }}</time>
+            <p>{{ if gt (len .Content) 200 }}{{ slice .Content 0 200 }}...{{ else }}{{ .Content }}{{ end }}</p>
+        </article>
+        {{ end }}
+    {{ else }}
+        <p>No blog posts yet. Check back soon!</p>
+    {{ end }}
+</section>
+{{ end }}

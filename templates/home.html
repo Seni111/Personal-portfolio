@@ -1,0 +1,49 @@
+{{ template "layout" . }}
+{{ define "content" }}
+<section class="hero">
+    <h1>Hi, I'm Seni</h1>
+    <p>Cloud &amp; DevOps Engineer — building production-grade infrastructure with AWS, Docker, and Terraform.</p>
+    <div class="hero-links">
+        <a href="/projects" class="btn">View My Projects</a>
+        <a href="/contact" class="btn btn-outline">Get In Touch</a>
+    </div>
+</section>
+
+<section class="about">
+    <h2>About Me</h2>
+    <p>
+        I'm Adeseni Adefila, a Computer Engineering student at Covenant University
+        with First Class Honours standing. I'm currently working through a 36-week
+        cloud engineering curriculum covering AWS architecture, Infrastructure as Code,
+        and DevOps automation.
+    </p>
+    <p>
+        I've deployed e-commerce stacks on EC2 + RDS, built containerized monitoring
+        dashboards with CI/CD pipelines, and provisioned cloud infrastructure with
+        Terraform and Ansible. This portfolio itself is built with Go and deployed
+        on AWS — from scratch.
+    </p>
+</section>
+
+<section class="about">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="card">
+            <h3>Cloud &amp; Infrastructure</h3>
+            <p>AWS EC2, RDS, VPC, Terraform, Ansible</p>
+        </div>
+        <div class="card">
+            <h3>Containers &amp; CI/CD</h3>
+            <p>Docker, Docker Compose, GitHub Actions, Nginx</p>
+        </div>
+        <div class="card">
+            <h3>Systems &amp; Scripting</h3>
+            <p>Linux, Bash, Python, Shell Scripting, Git</p>
+        </div>
+        <div class="card">
+            <h3>Databases</h3>
+            <p>PostgreSQL, MySQL, RDS, Redis</p>
+        </div>
+    </div>
+</section>
+{{ end }}
