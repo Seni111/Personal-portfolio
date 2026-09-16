@@ -1,26 +1,29 @@
 {{ template "layout" . }}
 {{ define "content" }}
-<section>
-    <h1>Projects</h1>
+<section class="section-container" style="padding-top: 120px;">
+    <div class="section-label">─── PROJECTS ───</div>
+    <h2 class="section-heading">Featured Projects</h2>
+    <div class="divider-sm"></div>
+    <p class="section-desc">Things I've built — cloud infrastructure and automation</p>
 
     {{ if .error }}
-        <p class="error">{{ .error }}</p>
+        <div class="alert alert-error">{{ .error }}</div>
     {{ end }}
 
     {{ if .projects }}
-        <div class="project-grid">
-            {{ range .projects }}
-            <div class="card">
-                <h3>{{ .Title }}</h3>
-                <p>{{ .Description }}</p>
-                {{ if .URL }}
-                    <a href="{{ .URL }}" class="btn" target="_blank">View Project</a>
-                {{ end }}
+        {{ range .projects }}
+        <div class="project-card reveal">
+            <h3>{{ .Title }}</h3>
+            <p class="project-desc">{{ .Description }}</p>
+            {{ if .URL }}
+            <div class="project-links">
+                <a href="{{ .URL }}" class="btn-primary btn-sm" target="_blank">View Project ↗</a>
             </div>
             {{ end }}
         </div>
+        {{ end }}
     {{ else }}
-        <p>No projects yet. Check back soon!</p>
+        <p class="empty-state">No projects yet. Check back soon!</p>
     {{ end }}
 </section>
 {{ end }}

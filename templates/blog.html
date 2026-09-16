@@ -1,22 +1,25 @@
 {{ template "layout" . }}
 {{ define "content" }}
-<section>
-    <h1>Blog</h1>
+<section class="section-container" style="padding-top: 120px;">
+    <div class="section-label">─── BLOG ───</div>
+    <h2 class="section-heading">Blog</h2>
+    <div class="divider-sm"></div>
+    <p class="section-desc">Thoughts on cloud, DevOps, and things I'm learning</p>
 
     {{ if .error }}
-        <p class="error">{{ .error }}</p>
+        <div class="alert alert-error">{{ .error }}</div>
     {{ end }}
 
     {{ if .posts }}
         {{ range .posts }}
-        <article class="card">
+        <div class="blog-card reveal">
             <h3><a href="/blog/{{ .ID }}">{{ .Title }}</a></h3>
-            <time>{{ .CreatedAt.Format "January 2, 2006" }}</time>
+            <time>{{ .CreatedAt.Format "02 Jan 2006" }}</time>
             <p>{{ if gt (len .Content) 200 }}{{ slice .Content 0 200 }}...{{ else }}{{ .Content }}{{ end }}</p>
-        </article>
+        </div>
         {{ end }}
     {{ else }}
-        <p>No blog posts yet. Check back soon!</p>
+        <p class="empty-state">No blog posts yet. Check back soon!</p>
     {{ end }}
 </section>
 {{ end }}

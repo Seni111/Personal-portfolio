@@ -1,49 +1,135 @@
 {{ template "layout" . }}
 {{ define "content" }}
 <section class="hero">
-    <h1>Hi, I'm Seni</h1>
-    <p>Cloud &amp; DevOps Engineer — building production-grade infrastructure with AWS, Docker, and Terraform.</p>
-    <div class="hero-links">
-        <a href="/projects" class="btn">View My Projects</a>
-        <a href="/contact" class="btn btn-outline">Get In Touch</a>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+        <div class="badge hero-el">
+            <span class="dot"></span>
+            <span>Open to opportunities</span>
+        </div>
+        <h1 class="hero-name hero-el">Adeseni Adefila</h1>
+        <h2 class="hero-title hero-el">Cloud &amp; DevOps Engineer</h2>
+        <div class="hero-divider hero-el"></div>
+        <p class="hero-tagline hero-el">I build production-grade cloud infrastructure<br>with AWS, Docker, and Terraform.</p>
+        <div class="hero-buttons hero-el">
+            <a href="/projects" class="btn-primary">View Projects</a>
+            <a href="/contact" class="btn-secondary">Contact Me</a>
+        </div>
+    </div>
+    <a href="#about" class="scroll-indicator hero-el">
+        <span>scroll down</span>
+        <div class="line"></div>
+        <div class="arrow"></div>
+    </a>
+</section>
+
+<section id="about" class="section-container">
+    <div class="section-label">─── ABOUT ───</div>
+    <div class="about-card reveal">
+        <h3>About Me</h3>
+        <div class="divider-sm"></div>
+        <div class="about-text">
+            <p>
+                I'm a Computer Engineering student at Covenant University with First Class Honours standing,
+                currently working through a 36-week cloud engineering curriculum covering AWS architecture,
+                Infrastructure as Code, and DevOps automation.
+            </p>
+            <p>
+                I've deployed e-commerce stacks on EC2 + RDS, built containerized monitoring dashboards
+                with CI/CD pipelines, and provisioned cloud infrastructure with Terraform and Ansible.
+                This portfolio itself is built with Go and deployed on AWS — from scratch.
+            </p>
+        </div>
+        <div class="stats-row">
+            <div class="stat-item">
+                <div class="stat-value">1st</div>
+                <div class="stat-label">CLASS HONOURS</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">36W</div>
+                <div class="stat-label">CLOUD CURRICULUM</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">5+</div>
+                <div class="stat-label">CLOUD PROJECTS</div>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="about">
-    <h2>About Me</h2>
-    <p>
-        I'm Adeseni Adefila, a Computer Engineering student at Covenant University
-        with First Class Honours standing. I'm currently working through a 36-week
-        cloud engineering curriculum covering AWS architecture, Infrastructure as Code,
-        and DevOps automation.
-    </p>
-    <p>
-        I've deployed e-commerce stacks on EC2 + RDS, built containerized monitoring
-        dashboards with CI/CD pipelines, and provisioned cloud infrastructure with
-        Terraform and Ansible. This portfolio itself is built with Go and deployed
-        on AWS — from scratch.
-    </p>
+<section class="section-container">
+    <h2 class="section-heading reveal">Skills</h2>
+    <div class="divider-sm"></div>
+    <p class="section-desc reveal">Technologies and tools I work with</p>
+
+    <div class="skills-grid">
+        <div class="skill-card reveal">
+            <h4>Cloud &amp; Infrastructure</h4>
+            <div class="line-sm"></div>
+            <ul>
+                <li>AWS EC2</li>
+                <li>RDS</li>
+                <li>VPC</li>
+                <li>Terraform</li>
+                <li>Ansible</li>
+            </ul>
+        </div>
+        <div class="skill-card reveal">
+            <h4>Containers &amp; CI/CD</h4>
+            <div class="line-sm"></div>
+            <ul>
+                <li>Docker</li>
+                <li>Docker Compose</li>
+                <li>GitHub Actions</li>
+                <li>Nginx</li>
+            </ul>
+        </div>
+        <div class="skill-card reveal">
+            <h4>Systems &amp; Scripting</h4>
+            <div class="line-sm"></div>
+            <ul>
+                <li>Linux</li>
+                <li>Bash</li>
+                <li>Python</li>
+                <li>Go</li>
+                <li>Git</li>
+            </ul>
+        </div>
+        <div class="skill-card reveal">
+            <h4>Databases</h4>
+            <div class="line-sm"></div>
+            <ul>
+                <li>PostgreSQL</li>
+                <li>MySQL</li>
+                <li>RDS</li>
+                <li>Redis</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
-<section class="about">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-        <div class="card">
-            <h3>Cloud &amp; Infrastructure</h3>
-            <p>AWS EC2, RDS, VPC, Terraform, Ansible</p>
-        </div>
-        <div class="card">
-            <h3>Containers &amp; CI/CD</h3>
-            <p>Docker, Docker Compose, GitHub Actions, Nginx</p>
-        </div>
-        <div class="card">
-            <h3>Systems &amp; Scripting</h3>
-            <p>Linux, Bash, Python, Shell Scripting, Git</p>
-        </div>
-        <div class="card">
-            <h3>Databases</h3>
-            <p>PostgreSQL, MySQL, RDS, Redis</p>
-        </div>
+<section class="section-container">
+    <h2 class="section-heading reveal">Experience</h2>
+    <div class="divider-sm"></div>
+
+    <div class="project-card reveal">
+        <h3>Engineering Intern (SIWES)</h3>
+        <div class="project-type">Covenant University, Ota &middot; Jul – Sep 2025</div>
+        <p class="project-desc">
+            Installed and commissioned 3 solar power systems. Configured network architectures
+            across 2 workstations achieving 99%+ uptime. Designed and tested 5 electrical circuits
+            to safety standards. Mentored 3 junior technicians, cutting hardware-related downtime by 40%.
+        </p>
+    </div>
+
+    <div class="project-card reveal">
+        <h3>Cloud Engineering Roadmap</h3>
+        <div class="project-type">Self-Directed &middot; 2025 – Present</div>
+        <p class="project-desc">
+            Executing a 36-week curriculum covering AWS architecture, IaC, and DevOps automation.
+            Phase 1 completed: Linux administration, advanced Git workflows, Docker containerization,
+            and shell scripting.
+        </p>
     </div>
 </section>
 {{ end }}
